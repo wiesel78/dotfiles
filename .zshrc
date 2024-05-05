@@ -6,9 +6,6 @@
 [[ -f ~/.config/zsh/goto.zsh ]] && source ~/.config/zsh/goto.zsh
 [[ -f ~/.config/zsh/fzf.zsh ]] && source ~/.config/zsh/fzf.zsh
 
-# Load Starship
-eval "$(starship init zsh)"
-
 # Load colors (for exa)
 export LS_COLORS="$(vivid generate molokai)"
 export EXA_COLORS="da=32"
@@ -21,4 +18,5 @@ setopt SHARE_HISTORY
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-
+# Load Starship
+eval "$(starship init zsh)"
