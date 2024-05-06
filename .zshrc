@@ -19,4 +19,5 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 # Load Starship
+prompt off
 eval "$(starship init zsh)"
