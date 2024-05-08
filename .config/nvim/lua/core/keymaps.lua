@@ -104,6 +104,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- clipboard copy with CTRL-c
 vim.keymap.set('n', '<C-c>', '"+', { desc = 'set register + prefix so you can copy with motion and y' })
-vim.keymap.set('n', '<C-v>', '"+p', { desc = 'insert the current system clipboard content' })
+vim.keymap.set('n', '<C-S-c>', '"+', { desc = 'set register + prefix so you can copy with motion and y' })
 vim.keymap.set('v', '<C-c>', '"+y', { desc = 'Copy current selection into the system clipboard' })
-vim.keymap.set('v', '<C-v>', '"+p', { desc = 'replace current selection with clipboard content' })
+vim.keymap.set('v', '<C-S-c>', '"+y', { desc = 'Copy current selection into the system clipboard' })
+vim.keymap.set('v', '<C-S-v>', '"+p', { desc = 'replace current selection with clipboard content' })
