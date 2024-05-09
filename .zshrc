@@ -5,6 +5,7 @@
 [[ -f ~/.config/zsh/wsl2fix.zsh ]] && source ~/.config/zsh/wsl2fix.zsh
 [[ -f ~/.config/zsh/goto.zsh ]] && source ~/.config/zsh/goto.zsh
 [[ -f ~/.config/zsh/fzf.zsh ]] && source ~/.config/zsh/fzf.zsh
+[[ -f ~/.config/zsh/completion.zsh ]] && source ~/.config/zsh/completion.zsh
 
 # Load colors (for exa)
 export LS_COLORS="$(vivid generate molokai)"
@@ -21,3 +22,4 @@ bindkey '^R' history-incremental-search-backward
 # Load Starship
 prompt off
 eval "$(starship init zsh)"
+
