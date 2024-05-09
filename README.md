@@ -25,6 +25,7 @@ cargo install exa
 cargo install starship
 cargo install vivid
 cargo install prompt
+cargo install ripgrep
 ```
 
 
