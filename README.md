@@ -28,4 +28,16 @@ cargo install prompt
 cargo install ripgrep
 ```
 
+## Windows
+A few windows specific things
 
+### Installs
+
+* with cygwin
+    * make
+    * unzip
+    * wget
+    * curl
+    * tar
+    * gzip
+    * tree-sitter
