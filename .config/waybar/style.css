@@ -104,6 +104,7 @@ button:hover {
     /* padding: 8px 8px; */
     /* color: #ffffff; */
     background-color: transparent;
+    margin: 8px 4px;
 }
 
 #window,
@@ -241,7 +242,7 @@ label:focus {
 }
 
 #language {
-    min-width: 16px;
+    /* min-width: 16px; */
     color: @sapphire;
 }
 

@@ -66,7 +66,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": " {}%"
+        "format": " {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -74,7 +74,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "battery": {
         "states": {
@@ -97,7 +97,7 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "\uf017 {:%H:%M}",
+        "format": "| {:%H:%M}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "tray": {
