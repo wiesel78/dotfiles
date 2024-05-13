@@ -21,5 +21,6 @@ bindkey '^R' history-incremental-search-backward
 
 # Load Starship
 prompt off
+eval "$(tmuxifier init -)"
 eval "$(starship init zsh)"
 
