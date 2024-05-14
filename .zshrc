@@ -21,6 +21,14 @@ bindkey '^R' history-incremental-search-backward
 
 # Load Starship
 prompt off
-eval "$(tmuxifier init -)"
-eval "$(starship init zsh)"
+
+# load tmuxifier if tmuxifier is available
+if command -v tmuxifier &> /dev/null; then
+  eval "$(tmuxifier init -)"
+fi
+
+# Load Starship if starship is available
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi
 
