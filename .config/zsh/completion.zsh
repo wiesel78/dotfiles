@@ -2,7 +2,13 @@ if [ $(command -v "kubectl") ]
     then source <(kubectl completion zsh)
 fi
 
-if [ $(command -v "docker") ]
+if [ $(command -v "helm") ]
+    then source <(helm completion zsh)
+fi
+
+if [ $(command -v "podman") ]
+    then source <(podman completion zsh)
+elif [ $(command -v "docker") ]
     then source <(docker completion zsh)
 fi
 
