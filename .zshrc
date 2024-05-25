@@ -11,17 +11,13 @@
 export LS_COLORS="$(vivid generate molokai)"
 export EXA_COLORS="da=32"
 
+# Set default editor
+EDITOR='nvim'
+
 # set vi mode
 set -o vi
 KEYTIMEOUT=1
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=1000
-setopt SHARE_HISTORY
-
-bindkey -v
-bindkey '^R' history-incremental-search-backward
 
 # Load Starship
 prompt off
