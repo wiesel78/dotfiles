@@ -13,6 +13,7 @@ return { -- LSP Configuration & Plugins
     -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     { 'folke/neodev.nvim', opts = {} },
+    { 'mfussenegger/nvim-jdtls' },
   },
   config = function()
     --  This function gets run when an LSP attaches to a particular buffer.
@@ -131,6 +132,26 @@ return { -- LSP Configuration & Plugins
       -- But for many setups, the LSP (`tsserver`) will work just fine
       -- tsserver = {},
       --
+
+      jdtls = {
+        settings = {
+          java = {
+            configuration = {
+              runtimes = {
+                {
+                  name = 'OpenJDK-21',
+                  path = '/usr/lib/jvm/java-21-openjdk/jre',
+                  default = true,
+                },
+                {
+                  name = 'OpenJDK-22',
+                  path = '/usr/lib/jvm/java-22-openjdk/jre',
+                },
+              },
+            },
+          },
+        },
+      },
 
       lua_ls = {
         -- cmd = {...},
