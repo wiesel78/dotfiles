@@ -18,10 +18,6 @@ EDITOR='nvim'
 set -o vi
 KEYTIMEOUT=1
 
-
-# Load Starship
-prompt off
-
 # load tmuxifier if tmuxifier is available
 if command -v tmuxifier &> /dev/null; then
   eval "$(tmuxifier init -)"
