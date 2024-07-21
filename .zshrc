@@ -6,6 +6,7 @@
 [[ -f ~/.config/zsh/goto.zsh ]] && source ~/.config/zsh/goto.zsh
 [[ -f ~/.config/zsh/fzf.zsh ]] && source ~/.config/zsh/fzf.zsh
 [[ -f ~/.config/zsh/completion.zsh ]] && source ~/.config/zsh/completion.zsh
+[[ -f ~/.config/zsh/tmux.zsh ]] && source ~/.config/zsh/tmux.zsh
 
 # Load colors (for exa)
 export LS_COLORS="$(vivid generate molokai)"
@@ -21,11 +22,6 @@ KEYTIMEOUT=1
 
 # Load Starship
 prompt off
-
-# load tmuxifier if tmuxifier is available
-if command -v tmuxifier &> /dev/null; then
-  eval "$(tmuxifier init -)"
-fi
 
 # Load Starship if starship is available
 if command -v starship &> /dev/null; then
