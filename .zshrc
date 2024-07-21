@@ -19,10 +19,12 @@ EDITOR='nvim'
 set -o vi
 KEYTIMEOUT=1
 
+# load tmuxifier if tmuxifier is available
+if command -v tmuxifier &> /dev/null; then
+  eval "$(tmuxifier init -)"
+fi
 
-# Load Starship
-prompt off
-
+>>>>>>> 782cc0bdac9f0033d73ac881bbb7133f274a9625
 # Load Starship if starship is available
 if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
