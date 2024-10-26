@@ -28,6 +28,7 @@ return {
         },
       },
       'saadparwaiz1/cmp_luasnip',
+      'rafamadriz/friendly-snippets',
 
       -- Adds other completion capabilities.
       --  nvim-cmp does not ship with all sources by default. They are split
@@ -39,7 +40,15 @@ return {
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
-      luasnip.config.setup {}
+
+      luasnip.config.setup {
+        history = true,
+      }
+      luasnip.add_snippets('html', {
+        luasnip.snippet('hello', {
+          luasnip.text_node { 'hello blub blib' },
+        }),
+      })
 
       cmp.setup {
         snippet = {
@@ -96,8 +105,9 @@ return {
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
-          { name = 'nvim_lsp' },
           { name = 'luasnip' },
+          { name = 'nvim_lsp' },
+          { name = 'buffer' },
           { name = 'path' },
         },
       }

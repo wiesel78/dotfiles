@@ -71,6 +71,8 @@ vim.opt.scrolloff = 10
 -- expand tab with spaces
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
