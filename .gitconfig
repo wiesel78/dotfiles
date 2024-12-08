@@ -3,6 +3,7 @@
 [user]
 	email = wurst78@gmail.com
 	name = Philip Ullrich
+	signingkey = 60A9D1B64369B376
 
 [core]
     pager = delta
@@ -22,3 +23,7 @@
     colorMoved = default
 [pull]
 	rebase = false
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
