@@ -110,3 +110,10 @@ vim.keymap.set('n', '<C-S-c>', '"+', { desc = 'set register + prefix so you can 
 vim.keymap.set('v', '<C-c>', '"+y', { desc = 'Copy current selection into the system clipboard' })
 vim.keymap.set('v', '<C-S-c>', '"+y', { desc = 'Copy current selection into the system clipboard' })
 vim.keymap.set('v', '<C-S-v>', '"+p', { desc = 'replace current selection with clipboard content' })
+
+vim.keymap.set('n', '<leader>st', function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd 'J'
+  vim.api.nvim_win_set_height(0, 10)
+end, { desc = 'Open a new terminal split' })
