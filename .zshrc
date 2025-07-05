@@ -11,6 +11,7 @@
 # Load colors (for exa)
 export LS_COLORS="$(vivid generate molokai)"
 export EXA_COLORS="da=32"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # Set default editor
 EDITOR='nvim'
