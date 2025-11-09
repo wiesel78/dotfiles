@@ -12,6 +12,7 @@
 export LS_COLORS="$(vivid generate molokai)"
 export EXA_COLORS="da=32"
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export KIND_EXPERIMENTAL_PROVIDER=podman
 
 # Set default editor
 EDITOR='nvim'
