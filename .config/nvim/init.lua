@@ -51,10 +51,10 @@ require('options')
 require('keymaps')
 require('filetypes')
 require('autocmds')
-require('llm').setup({
-  model = "codellama:7b-code-q4_0",
-  debounce_ms = 200,
-  max_tokens = 64,
-  temperature = 0.1,
-  fim = "codellama",
-})
+-- require('llm').setup({
+--   model = "codellama:7b-code-q4_0",
+--   debounce_ms = 200,
+--   max_tokens = 64,
+--   temperature = 0.1,
+--   fim = "codellama",
+-- })
