@@ -49,25 +49,29 @@ return {
       group = vim.api.nvim_create_augroup('UserLspKeymaps', { clear = true }),
       callback = function(args)
         local bufnr = args.buf
-        local opts = { noremap = true, silent = true, buffer = bufnr }
         local keymap = vim.keymap
 
+        local function opts(desc)
+          return { noremap = true, silent = true, buffer = bufnr, desc = desc }
+        end
+
         -- Keymaps for LSP actions
-        keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
-        keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)
-        keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)
-        keymap.set('n', '<leader>gk', vim.lsp.buf.hover, opts)
-        keymap.set('n', '<leader>ga', vim.lsp.buf.code_action, opts)
-        keymap.set('n', '<leader>gr', vim.lsp.buf.references, opts)
-        keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-        keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-        keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+        keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts("(D)eclaration"))
+        keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts("(d)efinition"))
+        keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts("(i)mplementation"))
+        keymap.set('n', '<leader>gk', vim.lsp.buf.hover, opts("(h)over"))
+        keymap.set('n', '<leader>gh', vim.lsp.buf.signature_help, opts("signature (h)elp"))
+        keymap.set('n', '<leader>ga', vim.lsp.buf.code_action, opts("code (a)ctions"))
+        keymap.set('n', '<leader>gr', vim.lsp.buf.references, opts("(r)eferences"))
+        keymap.set('n', 'gD', vim.lsp.buf.declaration, opts("(D)eclaration"))
+        keymap.set('n', 'gd', vim.lsp.buf.definition, opts("(d)efinition"))
+        keymap.set('n', 'gi', vim.lsp.buf.implementation, opts("(i)mplementation"))
+        keymap.set('n', 'gr', vim.lsp.buf.references, opts("(r)eferences"))
 
-        keymap.set('n', '<leader>sr', vim.lsp.buf.references, opts)
+        keymap.set('n', '<leader>sr', vim.lsp.buf.references, opts("(r)eferences"))
 
-        keymap.set('n', '<leader>er', vim.lsp.buf.rename, opts)
-        keymap.set('n', '<leader>ef', vim.lsp.buf.format, opts)
+        keymap.set('n', '<leader>er', vim.lsp.buf.rename, opts("(r)ename"))
+        keymap.set('n', '<leader>ef', vim.lsp.buf.format, opts("(f)ormat"))
       end,
     })
 
